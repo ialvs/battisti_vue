@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+
+  <div>
+
+    <FirstComponent />
+    <LifeCycle />
+    <Person />
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+
+import FirstComponent from './components/FirstComponent.vue'
+import Form from './components/Form/FormP.vue';
+import LifeCycle from './components/LifeCycle.vue';
+import Person from './components/Person.vue';
+
 
 export default {
+
   name: "App",
   components: {
-    HelloWorld,
-  },
+    FirstComponent,
+    LifeCycle,
+    Form,
+    Person
+},
+
+  data() {
+    return {
+      testing: "teste"
+    }
+  }
+
 };
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
