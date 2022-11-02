@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="src/app.js" defer></script>
+</head>
+<body>
+
+    <div id="app">
+        
+        <form id ="app-form" action="">
+            
+            <input type="text" v-model="input_name" placeholder="Insert your name">
+            <!--<input type="submit" value="Send" @click="submitFormName">-->
+            
+            <br> <br>
+            
+            <input type="text" v-model="input_age" placeholder="Insert your age">
+            <!--<input type="submit" value="Send" @click="submitFormAge">-->
+        
+        </form>
+        
+        <p>Hello World! My name is {{input_name}}. I'm {{input_age}} years old.</p>
+    
+    </div>
+    
+</body>
+</html>
