@@ -5,6 +5,7 @@
     <FirstComponent />
     <LifeCycle />
     <Person />
+
   </div>
 
 </template>
