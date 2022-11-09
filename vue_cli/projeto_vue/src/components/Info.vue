@@ -3,12 +3,18 @@
         <p v-if="hasJob">Estou trabalhando no momento :).</p>
         <p v-else>Busco emprego.</p>
 
-        <p>Utilizo as seguintes tecnologias:</p>
+        <p>Utilizo as seguintes tecnologias para backend</p>
 
         <ul>
-            <li>Vue</li>
-            <li>Java</li>
-            <li>Python</li>
+            <li v-for="(tech, index) in backendTechs" v-bind:key="index">{{tech}}</li>
+            <li>Testteee</li>
+        </ul>
+
+        <p>Utilizo as seguintes tecnologias para frontend</p>
+        <ul>
+            <li v-for="frame in frontendTechs" :key="frame.id">
+                {{frame.framework}}
+            </li>
         </ul>
         
         <div>
@@ -16,7 +22,7 @@
         </div>
 
         <p v-show="showEmail">Mande uma mensage para {{ email }}</p>
-        <p>Para acessar meu portfólio <a v-bind:href="my_link">basta clicar aqui</a></p>
+        <p class="scopedTest">Para acessar meu portfólio <a v-bind:href="my_link">basta clicar aqui</a></p>
 
         <MyPicture />
     </div>
@@ -33,7 +39,15 @@ export default {
             showEmail: false,
             email: "ian@whatever.com",
             my_link: "https://google.com",
-            buttonText: "Mostrar o email"
+            buttonText: "Mostrar o email",
+            backendTechs: ["Java","Python","JavaScript"],
+            frontendTechs: [
+                {id: 1, framework: "Vue"},
+                {id: 2, framework: "Next"},
+                {id: 3, framework: "Angular"}
+            ]
+
+            
         };
     },
     methods: {
@@ -51,3 +65,11 @@ export default {
     components: { MyPicture }
 }
 </script>
+
+<style>
+
+parent-paragraph {
+    color: red;
+}
+
+</style>
