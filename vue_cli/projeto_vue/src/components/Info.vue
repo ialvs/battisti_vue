@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p>{{compEmail}}</p>
         <p v-if="hasJob">Estou trabalhando no momento :).</p>
         <p v-else>Busco emprego.</p>
 
@@ -37,7 +38,6 @@ export default {
         return {
             hasJob: false,
             showEmail: false,
-            email: "ian@whatever.com",
             my_link: "https://google.com",
             buttonText: "Mostrar o email",
             backendTechs: ["Java","Python","JavaScript"],
@@ -48,7 +48,9 @@ export default {
             ]
 
             
-        };
+        }
+    }, props: {
+        email: String
     },
     methods: {
         showMail(){ 

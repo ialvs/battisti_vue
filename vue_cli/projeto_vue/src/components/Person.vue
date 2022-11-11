@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>O nome é {{ name }}</p>   
-        <Info />
+        <Info :email="email" />
         <FormP />
     </div>
 </template>
@@ -15,7 +15,8 @@ export default {
     name: "Person",
     data() {
         return {
-            name: "Ian"
+            name: "Ian",
+            email: "ian@gmail.com"
         }
     },
     components: { Info, FormP }
